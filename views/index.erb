@@ -1,0 +1,49 @@
+<div>
+<h1>Bands:</h1>
+  <form action="/" method="post">
+    <div class="form-group">
+      <label for="name">Add Your Band:</label>
+      <input class="form-control" type="text" name="name" id="name">
+    </div>
+    <button type="submit" class="btn btn-primary">Add</button>
+  </form>
+
+
+
+  <h1>Current Lineup:</h1>
+  <% if @bands.any? %>
+    <ul>
+      <% @bands.each do |band| %>
+        <li><a href="/bands/<%= band.id %>"><%= band.band_name %></a></li>
+      <% end %>
+    </ul>
+  <% else %>
+    <p>No current bands listed, Add a band!.</p>
+  <% end %>
+</div>
+
+<hr>
+
+<div>
+<h1>Venues:</h1>
+  <form action="/" method="post">
+    <div class="form-group">
+      <label for="place">Add a Venue:</label>
+      <input class="form-control" type="text" name="place" id="place">
+    </div>
+    <button type="submit" class="btn btn-primary">Add</button>
+  </form>
+
+
+
+  <h1>Current Venues:</h1>
+  <% if @venues.any? %>
+    <ul>
+      <% @venues.each do |venue| %>
+        <li><%= venue.venue_name %></li>
+      <% end %>
+    </ul>
+  <% else %>
+    <p>No current venues listed, Add a venue!</p>
+  <% end %>
+</div>

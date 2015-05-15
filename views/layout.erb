@@ -1,22 +1,23 @@
 <!DOCTYPE html>
 <html>
-	<head>
-	</head>
-	<body>
-    <div class="navbar">
-          <nav>
-            <ul>
-              <li><a href="/">Home</a></li>
-              <li><a href="/#">Bands</a></li>
-              <li><a href="/#">Venues</a></li>
+<head>
+  <title>Rock On</title>
+  <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css'>
 
-            </ul>
-          </nav>
-    </div>
+</head>
+<body>
+	<div class="navbar">
+				<nav>
+					<ul>
+						<li><a href="/">Home</a></li>
+						<li><a href="/#">Bands</a></li>
+						<li><a href="/#">Venues</a></li>
 
-		<div>
-			<%= yield %>
-		</div>
-
-	</body>
+					</ul>
+				</nav>
+	</div>
+  <div class="container">
+    <%= yield %>
+  </div>
+</body>
 </html>
